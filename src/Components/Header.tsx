@@ -1,18 +1,23 @@
 import { AccountCircle } from "@mui/icons-material";
 import { AppBar, Box, IconButton, Tab, Tabs, Toolbar, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
+const Heading = styled(Typography)`
+ color : red;
+`
 const Header = () =>{
     return(
         <Box>
-            <AppBar color="secondary">
+            <AppBar color="inherit" position="static">
                 <Toolbar >
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                    <Heading variant="h5" sx={{ flexGrow: 1 }}>
                          React-TS-MUI
-                    </Typography>
+                    </Heading> 
                     <Tabs sx={{ flexGrow: 15 }}>
-                        <Tab value="one" label="Home" />
-                        <Tab value="two" label="Form" />
-                        <Tab value="three" label="Contact Us" />
+                        <Link to="/"><Tab value="one" label="Home"/></Link>
+                        <Link to="/form"><Tab value="two" label="Form" /></Link>
+                        <Link to="/contact"><Tab value="three" label="Contact Us" /></Link>
                     </Tabs>
                     <IconButton
                         size="large"
