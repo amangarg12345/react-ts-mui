@@ -1,6 +1,5 @@
 import { Box, Button, InputBase } from '@mui/material'
 import React, { useState } from 'react'
-import { Interface } from 'readline'
 import styled from 'styled-components'
 
 const Val = styled(InputBase)`
